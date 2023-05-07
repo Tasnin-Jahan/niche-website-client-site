@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MoreProduct = (props) => {
     const { _id, name, img, description, price } = props.moreProduct
+
     return (
         // <Grid item xs={6} sm={4} md={4}>
         <Grid item xs={6}>
