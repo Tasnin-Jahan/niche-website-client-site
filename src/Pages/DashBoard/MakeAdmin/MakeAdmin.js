@@ -11,7 +11,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://afternoon-beyond-23129.herokuapp.com/users/admin', {
+        fetch('https://bicycle-shop-server.vercel.app/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

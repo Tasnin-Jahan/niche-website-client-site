@@ -7,7 +7,7 @@ import Navigation from '../Shared/Navigation/Navigation';
 const MoreProducts = () => {
     const [moreProducts, setMoreProducts] = useState([])
     useEffect(() => {
-        fetch('https://afternoon-beyond-23129.herokuapp.com/products')
+        fetch('https://bicycle-shop-server.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

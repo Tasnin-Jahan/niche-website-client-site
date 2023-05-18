@@ -12,7 +12,7 @@ const Products = () => {
             let filter_data = products.filter(obj => obj.name.includes(searchText));
             setProducts(filter_data)
         } else {
-            fetch('https://afternoon-beyond-23129.herokuapp.com/products')
+            fetch('https://bicycle-shop-server.vercel.app/products')
                 .then(res => res.json())
                 .then(data => setProducts(data));
 

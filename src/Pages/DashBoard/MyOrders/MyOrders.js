@@ -10,14 +10,14 @@ const MyOrders = () => {
     const [rows, setRows] = useState([])
 
     useEffect(() => {
-        const url = `https://afternoon-beyond-23129.herokuapp.com/bicycles?email=${user.email}`
+        const url = `https://bicycle-shop-server.vercel.app/bicycles?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setRows(data));
     }, [])
 
     const handleDeleteProduct = id => {
-        const url = `https://afternoon-beyond-23129.herokuapp.com/bicycles/${id}`
+        const url = `https://bicycle-shop-server.vercel.app/bicycles/${id}`
         fetch(url, {
             method: 'DELETE'
         })

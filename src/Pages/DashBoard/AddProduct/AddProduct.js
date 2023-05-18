@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://afternoon-beyond-23129.herokuapp.com/products', data)
+        axios.post('https://bicycle-shop-server.vercel.app/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully');

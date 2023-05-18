@@ -7,14 +7,14 @@ const ManageProducts = () => {
     const [rows, setRows] = useState([])
 
     useEffect(() => {
-        const url = `https://afternoon-beyond-23129.herokuapp.com/products`
+        const url = `https://bicycle-shop-server.vercel.app/products`
         fetch(url)
             .then(res => res.json())
             .then(data => setRows(data));
     }, [])
 
     const handleDeleteProduct = id => {
-        const url = `https://afternoon-beyond-23129.herokuapp.com/products/${id}`
+        const url = `https://bicycle-shop-server.vercel.app/products/${id}`
         fetch(url, {
             method: 'DELETE'
         })

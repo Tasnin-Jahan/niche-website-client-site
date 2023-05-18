@@ -32,7 +32,7 @@ const ProductDetail = () => {
             ...bookingInfo,
             productName: productDetail?.name
         }
-        fetch('https://afternoon-beyond-23129.herokuapp.com/bicycles', {
+        fetch('https://bicycle-shop-server.vercel.app/bicycles', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const ProductDetail = () => {
 
 
     useEffect(() => {
-        fetch('https://afternoon-beyond-23129.herokuapp.com/products')
+        fetch('https://bicycle-shop-server.vercel.app/products')
             .then((res) => res.json())
             .then((data) => {
                 let pro = data.find(p => p._id == id);

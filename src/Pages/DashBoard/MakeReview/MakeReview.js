@@ -7,7 +7,7 @@ const MakeReview = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://afternoon-beyond-23129.herokuapp.com/reviews', data)
+        axios.post('https://bicycle-shop-server.vercel.app/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully');
